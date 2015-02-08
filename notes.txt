@@ -1,0 +1,68 @@
+TODO
+	Words
+	Word selection
+	Test one phone
+	Layout 640x960
+	Word images
+	Word animations
+	Level select
+
+Sat 02/07/2015 
+11:11
+
+What is a simple game that Jennifer would enjoy?
+
+Spellstone with words about her.
+Animate an image and sound for each word.
+Synonyms for each word, so not always the same.
+Levels to unlock that increase grade level and length of words.
+
+Level icon:  Heart
+Pick letter icon:  heart.
+
+	Love Spell
+		CARING:  Hug a Boston terrier
+		WITTY:  Comic mask
+		MUSICAL:  Violin
+		ORGANIZED:  Daily planner
+		ELOQUENT:  Writing
+		EMPATHIC:  Smile with a heart
+		OPTIMISITIC:  Smiling sun
+		POETIC
+
+Combine 2 words into a puzzle.
+
+Spell a word.  Animate that reward.
+
+Wednesday
+UDID to compile to her phone.
+https://developer.apple.com
+
+
+Clue is a synonym for the word.
+
+affectionate,Christian,Christlike,Christly,adoring,benign,benignant,brotherly,caring,compassionate,conjugal,dear,decent,demonstrative,devoted,doting,faithful,filial,fond,fraternal,good,gracious,human,humane,husbandly,kind,kindhearted,kindly,kindly-disposed,languishing,lovelorn,lovesick,lovesome,loving,maternal,melting,nice,parental,paternal,romantic,sentimental,soft,softhearted,sympathetic,sympathizing,tender,tenderhearted,uxorious,warm,warmhearted,wifely
+
+empathetic,accordant,agreeable,agreeing,akin,allergic,amicable,anaphylactic,at one,attuned,compatible,concordant,congenial,corresponding,delicate,empathic,en rapport,frictionless,goosy,harmonious,hyperesthetic,hyperpathic,hypersensitive,in accord,in concert,in rapport,in tune,inharmony,irritable,itchy,like-minded,nervous,of one mind,overrefined,oversensible,oversensitive,overtender,passible,peaceful,prickly,refined,responsive,sensitive,skittish,supersensitive,sympathetic,tactful,tender,tetchy,thin-skinned,ticklish,together,touchy,understanding,united
+
+loving,Christian,Christlike,Christly,adoring,affectionate,all-knowing,all-powerful,all-seeing,all-wise,almighty,amatory,amorous,ardent,attached,attentive,benevolent,benign,benignant,bound,boundless,brotherly,careful,caring,cautious,changeless,circumspect,compassionate,conjugal,considerate,cordial,creating,creative,curious,dear,decent,demonstrative,devoted,doting,enamored,erotic,eternal,eternally the same,everlasting,faithful,fervent,filial,fond,fraternal,glorious,good,gracious,hallowed,heedful,highest,holy,human,humane,husbandly,immortal,immutable,impassioned,infatuated,infinite,just,kind,kindhearted,kindly,kindly-disposed,languishing,limitless,lovelorn,lovesick,lovesome,luminous,majestic,making,maternal,melting,merciful,mindful,nice,numinous,omnipotent,omnipresent,omniscient,one,parental,passionate,paternal,permanent,perpetual,radiant,regardful,romantic,sacred,sentimental,shaping,soft,softhearted,solicitous,sovereign,supreme,sympathetic,sympathizing,tender,tenderhearted,thoughtful,timeless,ubiquitous,unbounded,unchanging,undefined,unlimited,uxorious,warm,warmhearted,wifely
+
+thoughtful,accommodating,accommodative,affable,agreeable,analytical,attentive,brainy,brooding,calculating,careful,caring,cautious,charitable,circumspect,civil,cogitative,cognitive,compassionate,complaisant,concentrating,concentrative,conceptive,conceptual,conceptualized,considerate,contemplating,contemplative,courteous,curious,decorous,deep,deferential,deliberating,deliberative,delicate,demure,discreet,discriminating,discriminative,earnest,engrossed,enlightened,excogitating,fair,formal,frowning,graceful,gracious,grave,grim,grim-faced,grim-visaged,heedful,helpful,ideative,indulgent,intellectual,introspective,judgmatic,judicial,judicious,kind,kindly,lenient,logical,long-faced,loving,meditating,meditative,melancholy,mental,mindful,mindful of others,museful,musing,noetic,obliging,pensive,polite,politic,pondering,prehensive,provident,prudent,prudential,rapt,rational,reflecting,reflective,regardful,respectful,ruminant,ruminating,ruminative,sedate,serious,sober,sober-minded,sobersided,solemn,solicitous,somber,speculative,staid,stone-faced,straight-faced,studious,sympathetic,tactful,tender,thinking,thought,tolerant,unsmiling,unthoughtful,urbane,wary,weighty,well-advised,well-judged,wistful
+
+witty,Attic,absurd,amusing,biting,bizarre,brilliant,clever,diverting,droll,eccentric,entertaining,facetious,funny,hilarious,humorous,humorsome,incongruous,jesting,jocose,jocular,joking,joky,joshing,keen,keen-witted,laughable,ludicrous,mordant,nimble-witted,penetrating,piercing,pointed,priceless,probing,pungent,quaint,quick-witted,quizzical,rapier-like,rich,ridiculous,risible,salt,salty,scintillating,screaming,sharp,smart,sparkling,sprightly,whimsical
+
+command of language,affectation,articulateness,command of words,effective style,eloquence,eloquent tongue,exaggeration,expression,expression of ideas,expressiveness,facundity,fashion,feeling for words,felicitousness,felicity,form of speech,gift of expression,gift of gab,glibness,grace of expression,grandiloquence,graphicness,inflation,literary style,manner,manner of speaking,mannerism,meaningfulness,mode,mode of expression,oratory,peculiarity,personal style,rhetoric,sense of language,silver tongue,slickness,smoothness,strain,style,stylistic analysis,stylistics,the grand style,the plain style,the sublime,trick,vein,vividness,way
+
+eloquent,Ciceronian,Demosthenian,Demosthenic,Tullian,affecting,ardent,articulate,cogent,convincing,declamatory,effective,elocutionary,expressive,facile,facund,felicitous,fervent,fervid,fluent,forceful,forensic,free-speaking,free-spoken,glib,graphic,high,impassioned,impressive,incisive,indicative,lofty,loud-speaking,loud-spoken,meaningful,oratorical,outspoken,passionate,persuasive,plain-speaking,plain-spoken,poignant,potent,powerful,pregnant,revealing,rhetorical,rich,sententious,significant,silver,silver-tongued,slick,smooth,smooth-spoken,smooth-tongued,soft-speaking,soft-spoken,speaking,spellbinding,striking,suggestive,talkative,talking,telling,touching,trenchant,true-speaking,vivid,vocal,voluble,well-spoken
+
+expressive,Christophanic,Satanophanic,alive,allegorical,allusive,angelophanic,appearing,associational,connotational,connotative,definable,delineative,demonstrating,demonstrative,denominative,denotational,denotative,depictive,descriptive,designative,diagnostic,disclosive,displaying,eloquent,emblematic,emotional,epiphanic,evidential,evincive,exhibitive,explicit,expositional,expositive,expository,extended,extensional,facund,faithful,figural,figurative,forceful,full of meaning,full of point,full of substance,graphic,identifying,ideographic,idiosyncratic,imaginative,implicative,incarnating,incarnational,indicating,indicative,indicatory,individual,intelligible,intensional,interpretable,lifelike,lively,loaded,manifestative,materializing,meaning,meaningful,meaty,metaphorical,moving,naming,naturalistic,pathognomonic,peculiar,pictorial,pithy,pneumatophanic,poignant,pointed,pregnant,presentational,promulgatory,provocative,readable,realistic,referential,representative,responsive,revealing,revelational,revelatory,rich,semantic,semiotic,sententious,showing,signalizing,significant,significative,signifying,spirited,striking,substantial,suggestive,symbolic,symbolistic,symbological,symptomatic,symptomatologic,telling,theophanic,thought-provoking,transferred,true to life,typical,vivid,well-drawn
+
+hymnal,alto,arrangement,baritone,bass,bravura,choral,choric,coloratura,copy,draft,dramatic,edition,falsetto,heroic,hymnbook,instrumental score,libretto,liturgical,lute tablature,lyric,music,music paper,music roll,musical notation,musical score,notation,opera,opera score,operatic,orchestral score,part,piano score,psalmic,psalmodial,psalmodic,sacred,score,sheet music,short score,singing,songbook,songster,soprano,tablature,tenor,text,transcript,transcription,treble,version,vocal,vocal score,written music
+
+lyric,English sonnet,Horatian ode,Italian sonnet,Petrarchan sonnet,Pindaric ode,Sapphic ode,Shakespearean sonnet,alba,anacreontic,balada,ballad,ballade,book,bucolic,canso,chanson,clerihew,dirge,dithyramb,dulcet,eclogue,elegy,epic,epigram,epithalamium,epode,epopee,epopoeia,epos,georgic,ghazel,graceful,haiku,idiosyncratic,idyll,individual,jingle,libretto,light,limerick,lyrical,lyrics,madrigal,mellifluous,mellow,melodic,melodious,monody,musical,narrative poem,nursery rhyme,ode,palinode,pastoral,pastoral elegy,pastorela,pastourelle,personal,poem,prothalamium,rhapsodic,rhyme,rondeau,rondel,roundel,roundelay,satire,sentimental,sestina,silvery,sloka,song,sonnet,sonnet sequence,subjective,sweet,tanka,tenso,tenzone,threnody,triolet,troubadour poem,verse,verselet,versicle,villanelle,virelay,words
+
+lyrical,Alcaic,Anacreontic,Castalian,Homeric,Hudibrastic,Pierian,Pindaric,Theocritean,achingly sweet,agreeable,agreeable-sounding,alto,appealing,ariose,arioso,bardic,baritone,bass,bravura,bucolic,canorous,cantabile,catchy,choral,choric,coloratura,didactic,dithyrambic,dramatic,dulcet,ebullient,eclogic,ecstatic,effusive,elegiac,emotional,encomiastic,enthusiastic,epic,euphonic,euphonious,euphonous,exuberant,falsetto,fine-toned,golden,golden-tongued,golden-voiced,heroic,honeyed,hymnal,idyllic,impassioned,liturgical,lyric,melic,mellifluent,mellifluous,mellisonant,mellow,melodic,melodious,mock-heroic,music-flowing,music-like,musical,narrative,operatic,panegyrical,pastoral,pleasant,pleasant-sounding,poetic,poetico-mystical,poetico-mythological,poetico-philosophic,poetlike,psalmic,psalmodial,psalmodic,rapturous,rhapsodic,rich,runic,sacred,sapphic,silver-toned,silver-tongued,silver-voiced,silvery,singable,singing,skaldic,songful,songlike,sonorous,soprano,sweet,sweet-flowing,sweet-sounding,tenor,treble,tunable,tuneful,vocal
+
+scroll,A string,Aldine,Aldine book,Amati,Cremona,D string,E string,Elzevir,Elzevir book,G string,Strad,Stradivari,Stradivarius,account,agenda,annals,article,autograph,bass,bass viol,beadroll,blank,bow,brainchild,bridge,bull fiddle,cadastre,calendar,catalog,cello,census,census report,checklist,checkroll,chirograph,chronicle,cirrus,codex,coil,composition,computer printout,contrabass,copy,copy out,corkscrew,correspondence,cradle book,crowd,curl,curlicue,docket,document,documentation,dossier,double bass,draft,dramatis personae,draw up,early edition,edit,edited version,enface,engross,engrossment,essay,evolute,fair copy,fiction,fiddle,fiddlebow,fiddlestick,file,final draft,fingerboard,finished version,first draft,first edition,flimsy,form,gyre,head count,helix,history,holograph,honor roll,incunabulum,inscribe,instrument,inventory,involute,jury list,jury panel,kink,kit,kit fiddle,kit violin,legal document,legal instrument,legal paper,letter,letters,lineup,list,literae scriptae,literary artefact,literary production,literature,lucubration,make a recension,make out,manuscript,matter,memorial,muster,muster roll,nonfiction,nose count,official document,opus,order of business,original,palimpsest,paper,papers,papyrus,parchment,pen,pencil,penscript,personal file,piece,piece of writing,pipe roll,play,poem,poll,printed matter,printout,production,program,property roll,push the pen,put in writing,questionnaire,rare book,reading matter,recense,recension,record,recording,register,registry,relic,remains,returns,revise,rewrite,ringlet,roll,roll call,rolls,roster,rota,screed,screw,scribe,scrip,script,scrive,second draft,soundboard,spill ink,spiral,spoil paper,string,superscribe,swirl,table,tax roll,tendril,tenor violin,the written word,token,trace,transcribe,transcript,transcription,tuning peg,twirl,twist,type,typescript,version,vestige,viola,violin,violinette,violoncello,violoncello piccolo,violone,violotta,volute,volution,vortex,whirl,whorl,work,writ,write,write down,write out,writing
+
+Stradivarius,A string,Amati,Cremona,D string,E string,G string,Strad,Stradivari,bass,bass viol,bow,bridge,bull fiddle,cello,contrabass,crowd,double bass,fiddle,fiddlebow,fiddlestick,fingerboard,kit,kit fiddle,kit violin,scroll,soundboard,string,tenor violin,tuning peg,viola,violin,violinette,violoncello,violoncello piccolo,violone,violotta
