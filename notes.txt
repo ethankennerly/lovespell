@@ -1,13 +1,14 @@
 TODO
 	Words
-	Word selection
-	Test iPhone 4 deploy
-	Layout 640x960
+	Hearts
+	Color palette
 	Word images
 	Word animations
-	Level select
 	Melody by Jade Brewer
 	Melody of Brahms or Violin concerto
+	Test iPhone 4 deploy
+	Layout 640x960
+	Level select
 	Beautify web page and font.
 
 Sat 02/07/2015 
