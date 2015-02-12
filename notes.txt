@@ -1,10 +1,9 @@
 TODO
 	Words
-	Hearts
+	Melody by Jade Brewer
 	Color palette
 	Word images
 	Word animations
-	Melody by Jade Brewer
 	Melody of Brahms or Violin concerto
 	Test iPhone 4 deploy
 	Layout 640x960
