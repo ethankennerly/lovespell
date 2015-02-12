@@ -3,8 +3,9 @@ package com.finegamedesign.spellstone
     public class Model
     {
         internal static const EMPTY:String = " ";
-        internal static const LETTER_MAX:int = 8;
+        internal static const LETTER_MAX:int = 32;
         internal static const LETTER_MIN:int = 3;
+        internal static const SELECT_MAX:int = 8;
         internal static var levels:Array = [
             {columnCount: 5, rowCount: 1, diagram: "LOVED"},
             {columnCount: 3, rowCount: 2, grade: 1},
@@ -39,6 +40,7 @@ package com.finegamedesign.spellstone
                                     // 1;  // debug
         internal var removedLabels:Array;
         internal var words:Array;
+        internal var wordsSeen:Object = {};
         internal var valid:Boolean;
 
         public function Model()
@@ -120,9 +122,14 @@ package com.finegamedesign.spellstone
                         Math.min(maxLength, cellCount - letterCount));
 
                     var word:String = list[s];
-                    if (Words.has(word) && minLength <= word.length && word.length <= maxLength && words.indexOf(word) <= -1) {
+                    if (Words.has(word) 
+                        && minLength <= word.length 
+                        && word.length <= maxLength 
+                        && words.indexOf(word) <= -1 
+                        && !(word in wordsSeen)) {
                         // trace("Model.shuffleWords: " + word + " min " + minLength + " max " + maxLength + " grade " + grade);
                         words.push(word);
+                        wordsSeen[word] = true;
                         letterCount += word.length;
                         if (2 <= grade) {
                             grade--;
@@ -321,7 +328,7 @@ package com.finegamedesign.spellstone
                 removed = selected.slice();
                 // trace("Model.judge: removed " + removed);
                 for each(var address:int in removed) {
-                    removedLabels[address] = "correct_" + removed.length;
+                    removedLabels[address] = "correct_3";
                     table[address] = EMPTY;
                 }
                 scoreUp(removed.length);
@@ -350,21 +357,6 @@ package com.finegamedesign.spellstone
         {
             if (null != onDie) {
                 var bonus:int = 0;
-                if (length <= Model.LETTER_MIN + 1) {
-                    bonus = 0;
-                }
-                else if (length <= Model.LETTER_MIN + 2) {
-                    bonus = 1;
-                }
-                else if (length <= Model.LETTER_MIN + 3) {
-                    bonus = 2;
-                }
-                else if (length < Model.LETTER_MAX) {
-                    bonus = 3;
-                }
-                else {
-                    bonus = 4;
-                }
                 onDie(bonus);
             }
         }

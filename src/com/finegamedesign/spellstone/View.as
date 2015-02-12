@@ -162,7 +162,7 @@ package com.finegamedesign.spellstone
 
         private function updateSelected(ui:Main, selected:Array):void
         {
-            for (var i:int = 0; i < Model.LETTER_MAX; i++) {
+            for (var i:int = 0; i < Model.SELECT_MAX; i++) {
                 var selection:LetterTile = ui["selected_" + i].tile;
                 var label:String =  i < selected.length
                                     ? "select" 

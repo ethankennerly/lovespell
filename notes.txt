@@ -1,5 +1,4 @@
 TODO
-	Words
 	Melody by Jade Brewer
 	Color palette
 	Word images
