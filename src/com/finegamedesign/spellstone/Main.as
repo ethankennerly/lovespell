@@ -104,7 +104,7 @@ package com.finegamedesign.spellstone
             bonuses = [correct, bonus, bonus2, bonus3, bonus4];
             var transform:SoundTransform = new SoundTransform(0.25);
             SoundMixer.soundTransform = transform;
-            API.connect(root, "36063:penEMUso", "EJBdVs5dxidP7iLweMl9C1zyr2KrIecp");
+            // API.connect(root, "", "");
         }
 
         private function cheatLevel(event:MouseEvent):void
@@ -198,7 +198,7 @@ package com.finegamedesign.spellstone
                 feedback.gotoAndPlay("correct");
             }
             FlxKongregate.api.stats.submit("Score", model.score);
-            API.postScore("Score", model.score);
+            // API.postScore("Score", model.score);
         }
 
         private function lose():void

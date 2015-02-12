@@ -6,7 +6,7 @@ package com.finegamedesign.spellstone
         internal static const LETTER_MAX:int = 8;
         internal static const LETTER_MIN:int = 3;
         internal static var levels:Array = [
-            {columnCount: 4, rowCount: 1, diagram: "PLAY"},
+            {columnCount: 5, rowCount: 1, diagram: "LOVED"},
             {columnCount: 3, rowCount: 2, grade: 1},
             {columnCount: 3, rowCount: 3, grade: 2},
             {columnCount: 4, rowCount: 3, grade: 3},
@@ -74,7 +74,7 @@ package com.finegamedesign.spellstone
             selected = [];
             kill = 0;
             restartScore = score;
-            maxKill = columnCount * rowCount;
+            maxKill = occupied(table);
             valid = updateValid();
         }
 
@@ -99,22 +99,25 @@ package com.finegamedesign.spellstone
          * First word from grade level, then next lower grade.
          * Same word not added twice.
          * Ignore words not in all valid words list.
+         * Word length from min to max.
          */
         private function shuffleWords(lists:Array, grade:int,
                 cellCount:int, minLength:int, maxLength:int):Array
         {
             var words:Array = [];
             var letterCount:int = 0;
-            var list:Array = lists[grade];
-            shuffle(list);
-            while (letterCount < cellCount) {
-                for (var s:int = 0; letterCount < cellCount 
+            var list:Array;
+            grade++;
+            while (letterCount + minLength < cellCount) {
+                if (2 <= grade) {
+                    grade--;
+                    list = lists[grade];
+                    shuffle(list);
+                }
+                for (var s:int = 0; letterCount + minLength < cellCount 
                                     && s < list.length; s++) {
-                    if (cellCount - letterCount < 2 * minLength) {
-                        minLength = cellCount - letterCount;
-                    }
                     maxLength = Math.max(minLength, 
-                        Math.min(maxLength, cellCount - letterCount - minLength));
+                        Math.min(maxLength, cellCount - letterCount));
 
                     var word:String = list[s];
                     if (Words.has(word) && minLength <= word.length && word.length <= maxLength && words.indexOf(word) <= -1) {

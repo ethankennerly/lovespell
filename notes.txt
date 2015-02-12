@@ -1,11 +1,14 @@
 TODO
 	Words
 	Word selection
-	Test one phone
+	Test iPhone 4 deploy
 	Layout 640x960
 	Word images
 	Word animations
 	Level select
+	Melody by Jade Brewer
+	Melody of Brahms or Violin concerto
+	Beautify web page and font.
 
 Sat 02/07/2015 
 11:11

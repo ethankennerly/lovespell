@@ -36,7 +36,7 @@ package com.finegamedesign.spellstone
                         constructHash(String(new AllWordList()));
             }
             if (null == lists) {
-                lists = [["PLAY"]];
+                lists = [["LOVED"]];
                 lists.push(array(String(new Grade1List())));
                 lists.push(array(String(new Grade2List())));
                 lists.push(array(String(new Grade3List())));
