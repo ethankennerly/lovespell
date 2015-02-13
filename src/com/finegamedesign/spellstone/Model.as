@@ -273,6 +273,7 @@ package com.finegamedesign.spellstone
          */
         internal function select(i:int):Boolean
         {
+            clearRemoved();
             var push:Boolean;
             var index:int = selected.indexOf(i);
             if (index <= -1) {
@@ -331,7 +332,6 @@ package com.finegamedesign.spellstone
                 kill += removed.length;
                 remove();
             }
-            selected = [];
             valid = updateValid();
             return removed;
         }
@@ -347,7 +347,6 @@ package com.finegamedesign.spellstone
             while (1 <= removed.length) {
                 remove();
             }
-            removed = [];
         }
 
         private function remove():void
@@ -357,9 +356,9 @@ package com.finegamedesign.spellstone
                 var address:int = removed[removedIndex];
                 removedLabels[address] = removedLabel;
                 table[address] = EMPTY;
-                scoreUp(length);
+                scoreUp(removedIndex);
                 removedIndex++;
-                var interval:int = Math.min(250, 2000 / length);
+                var interval:int = Math.min(250, 1500 / length);
                                    // 500;
                 removeNow = now + interval;
                                 //  1000 / length;
@@ -368,6 +367,7 @@ package com.finegamedesign.spellstone
                 removed.length = 0;
                 removedIndex = 0;
                 removeNow = int.MAX_VALUE;
+                selected.length = 0;
             }
         }
 

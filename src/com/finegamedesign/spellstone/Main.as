@@ -109,8 +109,9 @@ package com.finegamedesign.spellstone
             // trace("updateHudText: ", score, highScore);
             score_txt.text = model.score.toString();
             highScore_txt.text = model.highScore.toString();
-            level_txt.text = level.toString();
-            maxLevel_txt.text = maxLevel.toString();
+            var add:int = 2;
+            level_txt.text = (level + add).toString();
+            maxLevel_txt.text = (maxLevel + add).toString();
             kill_txt.text = model.round.toString();
             maxKill_txt.text = model.roundMax.toString();
         }
@@ -175,7 +176,7 @@ package com.finegamedesign.spellstone
             FlxKongregate.api.stats.submit("Score", model.score);
             mouseChildren = false;
             feedback.gotoAndPlay("wrong");
-            feedback.txt.text = "EXAMPLES:\n" + model.words.join(", ");
+            feedback.txt.text = "YOU ARE . . .\n" + model.words.join(", ");
             sounds.wrong();
         }
 

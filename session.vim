@@ -27,9 +27,9 @@ cnoremap   :simalt ~
 inoremap   :simalt ~
 map <silent> \t :call MakeGreen()
 nmap gx <Plug>NetrwBrowseX
-nmap <S-Insert> "+gP
-nnoremap <C-Tab> w
 nnoremap <C-F4> c
+nnoremap <C-Tab> w
+nmap <S-Insert> "+gP
 nnoremap <silent> <Plug>NetrwBrowseX :call netrw#NetrwBrowseX(expand("<cWORD>"),0)
 onoremap <C-F4> c
 vnoremap <C-F4> c
@@ -74,11 +74,11 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +1 session.vim
+badd +12 session.vim
 badd +3 notes.txt
 badd +50 bin\index.html
 badd +1 txt\bigiqkids.com_wordlist_spelling_grade_1.txt
-badd +123 src\com\finegamedesign\spellstone\Model.as
+badd +331 src\com\finegamedesign\spellstone\Model.as
 badd +1 src\com\finegamedesign\spellstone\Main.as
 badd +2 txt\bigiqkids.com_wordlist_spelling_grade_2.txt
 badd +7 txt\bigiqkids.com_wordlist_spelling_grade_3.txt
@@ -89,11 +89,13 @@ badd +1 txt\bigiqkids.com_wordlist_spelling_grade_7.txt
 badd +79 txt\bigiqkids.com_wordlist_spelling_grade_8.txt
 badd +39 src\com\finegamedesign\spellstone\Words.as
 badd +1 txt\bigiqkids.com_wordlist_spelling_grade_9.txt
-badd +0 txt\bigiqkids.com_wordlist_spelling_grade_10.txt
+badd +1 txt\bigiqkids.com_wordlist_spelling_grade_10.txt
 badd +73 \archive\flash\synonymsearch\txt\mthesaur_sample.txt
-badd +0 txt\bigiqkids.com_wordlist_vocabulary_sat.txt
-badd +0 src\com\finegamedesign\spellstone\View.as
-badd +0 \archive\flash\synonymsearch\txt\mthesaur.txt
+badd +1 txt\bigiqkids.com_wordlist_vocabulary_sat.txt
+badd +6 src\com\finegamedesign\spellstone\View.as
+badd +1 \archive\flash\synonymsearch\txt\mthesaur.txt
+badd +62 src\com\finegamedesign\spellstone\Sounds.as
+badd +1 src\com\finegamedesign\spellstone\Sonata.as
 args notes.txt
 edit notes.txt
 set splitbelow splitright
@@ -209,12 +211,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 2 - ((1 * winheight(0) + 15) / 31)
+let s:l = 7 - ((6 * winheight(0) + 15) / 31)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-2
-normal! 01l
+7
+normal! 06l
 wincmd w
 argglobal
 edit bin\index.html
@@ -319,14 +321,13 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 45 - ((11 * winheight(0) + 15) / 31)
+let s:l = 57 - ((23 * winheight(0) + 15) / 31)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-45
-normal! 035l
+57
+normal! 0
 wincmd w
-2wincmd w
 exe 'vert 1resize ' . ((&columns * 67 + 66) / 133)
 exe 'vert 2resize ' . ((&columns * 65 + 66) / 133)
 tabedit txt\bigiqkids.com_wordlist_vocabulary_sat.txt
@@ -360,15 +361,15 @@ set nosplitbelow
 set nosplitright
 wincmd t
 set winheight=1 winwidth=1
-exe '1resize ' . ((&lines * 2 + 16) / 33)
-exe '2resize ' . ((&lines * 1 + 16) / 33)
-exe '3resize ' . ((&lines * 1 + 16) / 33)
-exe '4resize ' . ((&lines * 5 + 16) / 33)
-exe '5resize ' . ((&lines * 1 + 16) / 33)
+exe '1resize ' . ((&lines * 3 + 16) / 33)
+exe '2resize ' . ((&lines * 3 + 16) / 33)
+exe '3resize ' . ((&lines * 2 + 16) / 33)
+exe '4resize ' . ((&lines * 3 + 16) / 33)
+exe '5resize ' . ((&lines * 2 + 16) / 33)
 exe '6resize ' . ((&lines * 3 + 16) / 33)
-exe '7resize ' . ((&lines * 1 + 16) / 33)
-exe '8resize ' . ((&lines * 8 + 16) / 33)
-exe '9resize ' . ((&lines * 1 + 16) / 33)
+exe '7resize ' . ((&lines * 2 + 16) / 33)
+exe '8resize ' . ((&lines * 3 + 16) / 33)
+exe '9resize ' . ((&lines * 2 + 16) / 33)
 argglobal
 setlocal keymap=
 setlocal noarabic
@@ -471,11 +472,11 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 10 - ((0 * winheight(0) + 1) / 2)
+let s:l = 8 - ((1 * winheight(0) + 1) / 3)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-10
+8
 normal! 0
 lcd C:\archive\flash\lovespell
 wincmd w
@@ -582,11 +583,11 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 52 - ((0 * winheight(0) + 0) / 1)
+let s:l = 48 - ((0 * winheight(0) + 1) / 3)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-52
+48
 normal! 0
 lcd C:\archive\flash\lovespell
 wincmd w
@@ -693,12 +694,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 4 - ((0 * winheight(0) + 0) / 1)
+let s:l = 2 - ((0 * winheight(0) + 1) / 2)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-4
-normal! 011l
+2
+normal! 0
 lcd C:\archive\flash\lovespell
 wincmd w
 argglobal
@@ -804,11 +805,11 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 7 - ((4 * winheight(0) + 2) / 5)
+let s:l = 1 - ((0 * winheight(0) + 1) / 3)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-7
+1
 normal! 0
 lcd C:\archive\flash\lovespell
 wincmd w
@@ -915,7 +916,7 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 9 - ((0 * winheight(0) + 0) / 1)
+let s:l = 9 - ((1 * winheight(0) + 1) / 2)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -1026,12 +1027,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 7 - ((2 * winheight(0) + 1) / 3)
+let s:l = 1 - ((0 * winheight(0) + 1) / 3)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-7
-normal! 07l
+1
+normal! 0
 lcd C:\archive\flash\lovespell
 wincmd w
 argglobal
@@ -1137,11 +1138,11 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 5 - ((0 * winheight(0) + 0) / 1)
+let s:l = 1 - ((0 * winheight(0) + 1) / 2)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-5
+1
 normal! 0
 lcd C:\archive\flash\lovespell
 wincmd w
@@ -1248,11 +1249,11 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 3 - ((1 * winheight(0) + 4) / 8)
+let s:l = 4 - ((0 * winheight(0) + 1) / 3)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-3
+4
 normal! 0
 lcd C:\archive\flash\lovespell
 wincmd w
@@ -1359,36 +1360,42 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 6 - ((0 * winheight(0) + 0) / 1)
+let s:l = 1 - ((0 * winheight(0) + 1) / 2)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-6
+1
 normal! 0
 lcd C:\archive\flash\lovespell
 wincmd w
-2wincmd w
-exe '1resize ' . ((&lines * 2 + 16) / 33)
-exe '2resize ' . ((&lines * 1 + 16) / 33)
-exe '3resize ' . ((&lines * 1 + 16) / 33)
-exe '4resize ' . ((&lines * 5 + 16) / 33)
-exe '5resize ' . ((&lines * 1 + 16) / 33)
+exe '1resize ' . ((&lines * 3 + 16) / 33)
+exe '2resize ' . ((&lines * 3 + 16) / 33)
+exe '3resize ' . ((&lines * 2 + 16) / 33)
+exe '4resize ' . ((&lines * 3 + 16) / 33)
+exe '5resize ' . ((&lines * 2 + 16) / 33)
 exe '6resize ' . ((&lines * 3 + 16) / 33)
-exe '7resize ' . ((&lines * 1 + 16) / 33)
-exe '8resize ' . ((&lines * 8 + 16) / 33)
-exe '9resize ' . ((&lines * 1 + 16) / 33)
-tabedit C:\archive\flash\lovespell\src\com\finegamedesign\spellstone\View.as
+exe '7resize ' . ((&lines * 2 + 16) / 33)
+exe '8resize ' . ((&lines * 3 + 16) / 33)
+exe '9resize ' . ((&lines * 2 + 16) / 33)
+tabedit C:\archive\flash\lovespell\src\com\finegamedesign\spellstone\Main.as
 set splitbelow splitright
 wincmd _ | wincmd |
 vsplit
 1wincmd h
 wincmd w
+wincmd _ | wincmd |
+split
+1wincmd k
+wincmd w
 set nosplitbelow
 set nosplitright
 wincmd t
 set winheight=1 winwidth=1
-exe 'vert 1resize ' . ((&columns * 67 + 66) / 133)
-exe 'vert 2resize ' . ((&columns * 65 + 66) / 133)
+exe 'vert 1resize ' . ((&columns * 66 + 66) / 133)
+exe '2resize ' . ((&lines * 15 + 16) / 33)
+exe 'vert 2resize ' . ((&columns * 66 + 66) / 133)
+exe '3resize ' . ((&lines * 15 + 16) / 33)
+exe 'vert 3resize ' . ((&columns * 66 + 66) / 133)
 argglobal
 setlocal keymap=
 setlocal noarabic
@@ -1491,12 +1498,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 150 - ((13 * winheight(0) + 15) / 31)
+let s:l = 114 - ((28 * winheight(0) + 15) / 31)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-150
-normal! 089l
+114
+normal! 032l
 lcd C:\archive\flash\lovespell
 wincmd w
 argglobal
@@ -1602,17 +1609,131 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 331 - ((13 * winheight(0) + 15) / 31)
+let s:l = 359 - ((10 * winheight(0) + 7) / 15)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-331
-normal! 054l
+359
+normal! 035l
+lcd C:\archive\flash\lovespell
+wincmd w
+argglobal
+edit C:\archive\flash\lovespell\src\com\finegamedesign\spellstone\View.as
+setlocal keymap=
+setlocal noarabic
+setlocal autoindent
+setlocal balloonexpr=
+setlocal nobinary
+setlocal bufhidden=
+setlocal buflisted
+setlocal buftype=
+setlocal nocindent
+setlocal cinkeys=0{,0},0),:,0#,!^F,o,O,e
+setlocal cinoptions=
+setlocal cinwords=if,else,while,do,for,switch
+setlocal colorcolumn=
+setlocal comments=s1:/*,mb:*,ex:*/,://,b:#,:%,:XCOMM,n:>,fb:-
+setlocal commentstring=/*%s*/
+setlocal complete=.,w,b,u,t,i
+setlocal concealcursor=
+setlocal conceallevel=0
+setlocal completefunc=
+setlocal nocopyindent
+setlocal cryptmethod=
+setlocal nocursorbind
+setlocal nocursorcolumn
+setlocal nocursorline
+setlocal define=
+setlocal dictionary=
+setlocal nodiff
+setlocal equalprg=
+setlocal errorformat=
+setlocal expandtab
+if &filetype != 'actionscript'
+setlocal filetype=actionscript
+endif
+setlocal foldcolumn=0
+setlocal foldenable
+setlocal foldexpr=0
+setlocal foldignore=#
+setlocal foldlevel=0
+setlocal foldmarker={{{,}}}
+setlocal foldmethod=manual
+setlocal foldminlines=1
+setlocal foldnestmax=20
+setlocal foldtext=foldtext()
+setlocal formatexpr=
+setlocal formatoptions=tcq
+setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
+setlocal grepprg=
+setlocal iminsert=2
+setlocal imsearch=2
+setlocal include=
+setlocal includeexpr=
+setlocal indentexpr=
+setlocal indentkeys=0{,0},:,0#,!^F,o,O,e
+setlocal noinfercase
+setlocal iskeyword=@,48-57,_,192-255
+setlocal keywordprg=
+setlocal nolinebreak
+setlocal nolisp
+setlocal nolist
+setlocal makeprg=mxmlc\ -compiler.debug\ -compiler.incremental
+setlocal matchpairs=(:),{:},[:]
+setlocal modeline
+setlocal modifiable
+setlocal nrformats=octal,hex
+setlocal nonumber
+setlocal numberwidth=4
+setlocal omnifunc=
+setlocal path=
+setlocal nopreserveindent
+setlocal nopreviewwindow
+setlocal quoteescape=\\
+setlocal readonly
+setlocal norelativenumber
+setlocal norightleft
+setlocal rightleftcmd=search
+setlocal noscrollbind
+setlocal shiftwidth=4
+setlocal noshortname
+setlocal smartindent
+setlocal softtabstop=0
+setlocal nospell
+setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
+setlocal spellfile=
+setlocal spelllang=en
+setlocal statusline=
+setlocal suffixesadd=
+setlocal noswapfile
+setlocal synmaxcol=3000
+if &syntax != 'actionscript'
+setlocal syntax=actionscript
+endif
+setlocal tabstop=4
+setlocal tags=
+setlocal textwidth=0
+setlocal thesaurus=
+setlocal noundofile
+setlocal nowinfixheight
+setlocal nowinfixwidth
+setlocal wrap
+setlocal wrapmargin=0
+silent! normal! zE
+let s:l = 156 - ((0 * winheight(0) + 7) / 15)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+156
+normal! 012l
 lcd C:\archive\flash\lovespell
 wincmd w
 2wincmd w
-exe 'vert 1resize ' . ((&columns * 67 + 66) / 133)
-exe 'vert 2resize ' . ((&columns * 65 + 66) / 133)
+exe 'vert 1resize ' . ((&columns * 66 + 66) / 133)
+exe '2resize ' . ((&lines * 15 + 16) / 33)
+exe 'vert 2resize ' . ((&columns * 66 + 66) / 133)
+exe '3resize ' . ((&lines * 15 + 16) / 33)
+exe 'vert 3resize ' . ((&columns * 66 + 66) / 133)
 tabedit C:\archive\flash\synonymsearch\txt\mthesaur.txt
 set splitbelow splitright
 wincmd _ | wincmd |
@@ -1623,8 +1744,8 @@ set nosplitbelow
 set nosplitright
 wincmd t
 set winheight=1 winwidth=1
-exe '1resize ' . ((&lines * 15 + 16) / 33)
-exe '2resize ' . ((&lines * 15 + 16) / 33)
+exe '1resize ' . ((&lines * 29 + 16) / 33)
+exe '2resize ' . ((&lines * 1 + 16) / 33)
 argglobal
 setlocal keymap=
 setlocal noarabic
@@ -1727,12 +1848,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 507 - ((0 * winheight(0) + 7) / 15)
+let s:l = 67 - ((3 * winheight(0) + 14) / 29)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-507
-normal! 0135l
+67
+normal! 0
 lcd C:\archive\flash\lovespell
 wincmd w
 argglobal
@@ -1838,7 +1959,7 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 73 - ((0 * winheight(0) + 7) / 15)
+let s:l = 73 - ((0 * winheight(0) + 0) / 1)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -1847,9 +1968,9 @@ normal! 08l
 lcd C:\archive\flash\lovespell
 wincmd w
 2wincmd w
-exe '1resize ' . ((&lines * 15 + 16) / 33)
-exe '2resize ' . ((&lines * 15 + 16) / 33)
-tabnext 1
+exe '1resize ' . ((&lines * 29 + 16) / 33)
+exe '2resize ' . ((&lines * 1 + 16) / 33)
+tabnext 3
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf
 endif
