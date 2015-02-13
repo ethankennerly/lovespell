@@ -15,35 +15,6 @@ package com.finegamedesign.spellstone
 
     public dynamic class Main extends MovieClip
     {
-        [Embed(source="../../../../sfx/complete.mp3")]
-        private static var completeClass:Class;
-        private var complete:Sound = new completeClass();
-        [Embed(source="../../../../sfx/correct.mp3")]
-        private static var correctClass:Class;
-        private var correct:Sound = new correctClass();
-        [Embed(source="../../../../sfx/wrong.mp3")]
-        private static var wrongClass:Class;
-        private var wrong:Sound = new wrongClass();
-        [Embed(source="../../../../sfx/contagion.mp3")]
-        private static var contagionClass:Class;
-        private var contagion:Sound = new contagionClass();
-        [Embed(source="../../../../sfx/die.mp3")]
-        private static var dieClass:Class;
-        private var die:Sound = new dieClass();
-        [Embed(source="../../../../sfx/bonus.mp3")]
-        private static var bonusClass:Class;
-        private var bonus:Sound = new bonusClass();
-        [Embed(source="../../../../sfx/bonus2.mp3")]
-        private static var bonus2Class:Class;
-        private var bonus2:Sound = new bonus2Class();
-        [Embed(source="../../../../sfx/bonus3.mp3")]
-        private static var bonus3Class:Class;
-        private var bonus3:Sound = new bonus3Class();
-        [Embed(source="../../../../sfx/bonus4.mp3")]
-        private static var bonus4Class:Class;
-        private var bonus4:Sound = new bonus4Class();
-        private var bonuses:Array;
-
         public var feedback:MovieClip;
         public var highScore_txt:TextField;
         public var level_txt:TextField;
@@ -68,6 +39,7 @@ package com.finegamedesign.spellstone
         private var level:int;
         private var maxLevel:int;
         private var model:Model;
+        private var sounds:Sounds;
         private var view:View;
 
         public function Main()
@@ -84,14 +56,14 @@ package com.finegamedesign.spellstone
         {
             removeEventListener(Event.ADDED_TO_STAGE, init);
             Words.init();
+            sounds = new Sounds();
             inTrial = false;
             level = 1;
             maxLevel = Model.levels.length;
             model = new Model();
-            model.onContagion = contagion.play;
-            model.onDie = scoreUp;
-            model.onDieBonus = bonus.play;
-            model.onDeselect = die.play;
+            model.onContagion = sounds.correct;
+            model.onDie = sounds.correct;
+            model.onDeselect = sounds.reverse;
             view = new View();
             trial(level);
             addEventListener(Event.ENTER_FRAME, update, false, 0, true);
@@ -101,7 +73,6 @@ package com.finegamedesign.spellstone
             feedback.mouseEnabled = false;
             feedback.mouseChildren = false;
             feedback.txt.mouseEnabled = false;
-            bonuses = [correct, bonus, bonus2, bonus3, bonus4];
             var transform:SoundTransform = new SoundTransform(0.25);
             SoundMixer.soundTransform = transform;
             // API.connect(root, "", "");
@@ -153,13 +124,12 @@ package com.finegamedesign.spellstone
                 FlxKongregate.stage = stage;
                 FlxKongregate.init(FlxKongregate.connect);
             }
+            var win:int = model.update(getTimer(), inTrial);
+            view.update();
             if (inTrial) {
-                var win:int = model.update();
-                view.update();
                 result(win);
             }
             else {
-                view.update();
                 if ("next" == feedback.currentLabel) {
                     next();
                 }
@@ -180,11 +150,6 @@ package com.finegamedesign.spellstone
             }
         }
 
-        private function scoreUp(bonus:int):void
-        {
-            bonuses[bonus].play();
-        }
-
         private function win():void
         {
             inTrial = false;
@@ -192,7 +157,7 @@ package com.finegamedesign.spellstone
             if (Model.levels.length < level) {
                 level = 1;
                 feedback.gotoAndPlay("complete");
-                complete.play();
+                sounds.correct();
             }
             else {
                 feedback.gotoAndPlay("correct");
@@ -211,7 +176,7 @@ package com.finegamedesign.spellstone
             mouseChildren = false;
             feedback.gotoAndPlay("wrong");
             feedback.txt.text = "EXAMPLES:\n" + model.words.join(", ");
-            wrong.play();
+            sounds.wrong();
         }
 
         public function next():void

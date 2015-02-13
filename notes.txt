@@ -4,6 +4,7 @@ TODO
 	Word images
 	Word animations
 	Melody of Brahms or Violin concerto
+	Accept.  Reveal one at a time.
 	Test iPhone 4 deploy
 	Layout 640x960
 	Level select

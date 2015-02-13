@@ -28,7 +28,6 @@ package com.finegamedesign.spellstone
         internal var onContagion:Function;
         internal var onDeselect:Function;
         internal var onDie:Function;
-        internal var onDieBonus:Function;
         internal var rowCount:int;
         internal var selected:Array;
         internal var table:Array;
@@ -322,42 +321,77 @@ package com.finegamedesign.spellstone
          */
         internal function judge():Array
         {
-            var removed:Array = [];
+            clearRemoved();
             valid = updateValid();
             if (valid) {
                 removed = selected.slice();
                 // trace("Model.judge: removed " + removed);
-                for each(var address:int in removed) {
-                    removedLabels[address] = "correct_3";
-                    table[address] = EMPTY;
-                }
-                scoreUp(removed.length);
+                var clamped:int = Math.max(LETTER_MIN, Math.min(SELECT_MAX, removed.length));
+                removedLabel = "correct_" + clamped.toString();
+                kill += removed.length;
+                remove();
             }
             selected = [];
             valid = updateValid();
             return removed;
         }
-   
-        /**
-         * 0, 0, 10, 20, 40,  80, 160, 320, 640, 1280, 2560, 5120, ...
-         */
-        private function scoreUp(length:int):void
+  
+        private var now:int = 0;
+        private var removeNow:int = 0;
+        private var removedIndex:int = 0;
+        private var removedLabel:String = "";
+        private var removed:Array = [];
+        
+        private function clearRemoved():void
         {
-            kill += length;
-            var points:int = Math.pow(2, length - 3);
-            points *= 10;
+            while (1 <= removed.length) {
+                remove();
+            }
+            removed = [];
+        }
+
+        private function remove():void
+        {
+            var length:int = removed.length;
+            if (removedIndex < length) {
+                var address:int = removed[removedIndex];
+                removedLabels[address] = removedLabel;
+                table[address] = EMPTY;
+                scoreUp(length);
+                removedIndex++;
+                var interval:int = Math.min(250, 2000 / length);
+                                   // 500;
+                removeNow = now + interval;
+                                //  1000 / length;
+            }
+            else {
+                removed.length = 0;
+                removedIndex = 0;
+                removeNow = int.MAX_VALUE;
+            }
+        }
+
+        internal function updateRemove():void
+        {
+            if (removeNow <= now) {
+                remove();
+            }
+        }
+
+        /**
+         * 1, 2, 4, 8, 16, 32, 64, 128, 256, 512, ...
+         */
+        private function scoreUp(index:int):void
+        {
+            var length:int = index + 1;
+            var points:int = Math.pow(2, length)
+                - Math.pow(2, index);
             score += points;
             if (highScore < score) {
                 highScore = score;
             }
-            bonus(length);
-        }
-
-        private function bonus(length:int):void
-        {
             if (null != onDie) {
-                var bonus:int = 0;
-                onDie(bonus);
+                onDie();
             }
         }
 
@@ -366,6 +400,7 @@ package com.finegamedesign.spellstone
          */
         internal function clear():void
         {
+            clearRemoved();
             removedLabels = populateRemovedLabels(cellCount);
             for (var i:int = 0; i < table.length; i++) {
                 if (null != table[i]) {
@@ -379,9 +414,16 @@ package com.finegamedesign.spellstone
             score = restartScore;
         }
 
-        internal function update():int
+        internal function update(now:int, inTrial:Boolean):int
         {
-            return win();
+            this.now = now;
+            updateRemove();
+            if (inTrial) {
+                return win();
+            }
+            else {
+                return 0;
+            }
         }
 
         /**

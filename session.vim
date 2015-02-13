@@ -105,8 +105,8 @@ set nosplitbelow
 set nosplitright
 wincmd t
 set winheight=1 winwidth=1
-exe 'vert 1resize ' . ((&columns * 67 + 67) / 134)
-exe 'vert 2resize ' . ((&columns * 65 + 67) / 134)
+exe 'vert 1resize ' . ((&columns * 67 + 66) / 133)
+exe 'vert 2resize ' . ((&columns * 65 + 66) / 133)
 argglobal
 setlocal keymap=
 setlocal noarabic
@@ -209,12 +209,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 3 - ((0 * winheight(0) + 15) / 31)
+let s:l = 2 - ((1 * winheight(0) + 15) / 31)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-3
-normal! 036l
+2
+normal! 01l
 wincmd w
 argglobal
 edit bin\index.html
@@ -319,15 +319,16 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 32 - ((10 * winheight(0) + 15) / 31)
+let s:l = 45 - ((11 * winheight(0) + 15) / 31)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-32
+45
 normal! 035l
 wincmd w
-exe 'vert 1resize ' . ((&columns * 67 + 67) / 134)
-exe 'vert 2resize ' . ((&columns * 65 + 67) / 134)
+2wincmd w
+exe 'vert 1resize ' . ((&columns * 67 + 66) / 133)
+exe 'vert 2resize ' . ((&columns * 65 + 66) / 133)
 tabedit txt\bigiqkids.com_wordlist_vocabulary_sat.txt
 set splitbelow splitright
 wincmd _ | wincmd |
@@ -803,12 +804,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 9 - ((4 * winheight(0) + 2) / 5)
+let s:l = 7 - ((4 * winheight(0) + 2) / 5)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-9
-normal! 07l
+7
+normal! 0
 lcd C:\archive\flash\lovespell
 wincmd w
 argglobal
@@ -1366,7 +1367,7 @@ normal! zt
 normal! 0
 lcd C:\archive\flash\lovespell
 wincmd w
-9wincmd w
+2wincmd w
 exe '1resize ' . ((&lines * 2 + 16) / 33)
 exe '2resize ' . ((&lines * 1 + 16) / 33)
 exe '3resize ' . ((&lines * 1 + 16) / 33)
@@ -1386,8 +1387,8 @@ set nosplitbelow
 set nosplitright
 wincmd t
 set winheight=1 winwidth=1
-exe 'vert 1resize ' . ((&columns * 67 + 67) / 134)
-exe 'vert 2resize ' . ((&columns * 65 + 67) / 134)
+exe 'vert 1resize ' . ((&columns * 67 + 66) / 133)
+exe 'vert 2resize ' . ((&columns * 65 + 66) / 133)
 argglobal
 setlocal keymap=
 setlocal noarabic
@@ -1609,9 +1610,9 @@ normal! zt
 normal! 054l
 lcd C:\archive\flash\lovespell
 wincmd w
-9wincmd w
-exe 'vert 1resize ' . ((&columns * 67 + 67) / 134)
-exe 'vert 2resize ' . ((&columns * 65 + 67) / 134)
+2wincmd w
+exe 'vert 1resize ' . ((&columns * 67 + 66) / 133)
+exe 'vert 2resize ' . ((&columns * 65 + 66) / 133)
 tabedit C:\archive\flash\synonymsearch\txt\mthesaur.txt
 set splitbelow splitright
 wincmd _ | wincmd |
@@ -1845,10 +1846,10 @@ normal! zt
 normal! 08l
 lcd C:\archive\flash\lovespell
 wincmd w
-9wincmd w
+2wincmd w
 exe '1resize ' . ((&lines * 15 + 16) / 33)
 exe '2resize ' . ((&lines * 15 + 16) / 33)
-tabnext 2
+tabnext 1
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf
 endif
